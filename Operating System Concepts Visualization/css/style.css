@@ -1,0 +1,103 @@
+:root{
+    --font-color: #fff;
+    --hfont-size:1.4rem;
+    --font-size:1.15rem;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* body{
+    background-color: #000000;
+} */
+
+body::before{
+    content: "";
+    background: url('../img/bg.jpg') no-repeat center center/cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+   background-size: 100% 100%;
+}
+
+.head{
+    width: 100%;
+    color: var(--font-color);
+    padding: 20px 0px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.8rem;
+    text-shadow: 3px 2px 3px #e4e4ad;
+}
+
+.container{
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+
+.line-1{
+    position: absolute;
+    background-color: #fff;
+    width: 2px;
+    height: 210px;
+    transform: rotate(30deg);
+    border-radius: 5px;
+    top: -70px;
+    left: 12px;
+    box-shadow: 3px 0px 8px #ffdddd;
+
+}
+.line-2{
+    position: absolute;
+    background-color: #fff;
+    width: 2px;
+    height: 210px;
+    transform: rotate(30deg);
+    border-radius: 5px;
+    right: 12px;
+    top: 272px;
+    box-shadow: 3px 0px 8px #ffdddd;
+}
+.implement{
+    position: relative;
+    width: 425px;
+    background-color: #fffafa;
+    top: 45px;
+    margin: auto;
+    border-radius: 25px;
+    padding: 15px 0px;
+}
+.imp-list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.text{
+    padding: 15px 0px;
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+.imp-list a{
+    width: 285px;
+    border-radius: 15px;
+       margin: 6px 0px;
+    /* border: 3px solid green; */
+    text-align: center;
+    padding: 10px 8px;
+    text-decoration: none;
+    border: 3px solid grey;
+    background-color:#969696;
+    color: #fff;
+    font-size: var(--font-size);
+}
+
+.imp-list a:hover{
+    background-color: #383535;
+}

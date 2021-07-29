@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peterson algorithm</title>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link rel="stylesheet" href="./css/peterson.css">
+    <script src="./js/Peterson.js"></script>
+
+</head>
+
+<body>
+    <header class="head">Peterson Algorithm</header>
+    <!-- Pseudo code for Simplest Synchronization Mechanism -->
+    <div class="code">
+        <div class="upper">
+            <div class="code-1">
+                <div class="code-head">SHARED VARIABLES</div> <br>
+                <span></span> <br>
+                <span> #define N 2 // N is of processes</span> <br>
+                <span>#define TRUE=0 // Boolean value to change status</span><br>
+                <span>#define FALSE=0 // Boolean value to change status</span><br>
+                <span>int interested[N]=FALSE // status array for 2 processes</span><br>
+                <span> int turn; // variable to allocate turn to process</span><br>
+            </div>
+            <div class="code-2">
+                <div class="code-head">ENTRY SECTION</div> <br>
+                <span>void Entry_Section (int process)</span><br>
+                <span>{</span><br>
+                <span>int other;</span><br>
+                <span>other = 1-process;</span><br>
+                <span>interested[process]=TRUE;</span><br>
+                <span>turn=process;</span><br>
+                <span> while(interested[other]==TRUE && TURN=process);</span> <br>
+                <span>}</span><br>
+            </div>
+        </div>
+        <div class="lower">
+            <div class="code-3">
+                <div class="code-head">CRITICAL SECTION</div><br>
+                <span id="c3">code that may create inconsistency in shared variable</span> 
+                <span>values if concurrent access to this code happens.</span>
+                
+            </div>
+            <div class="code-4">
+                <div class="code-head">EXIT SECTION</div> <br>
+                <span>void Exit_Section(int process)</span><br>
+                <span>{</span><br>
+                <span>interested[process]=FALSE;</span><br>
+                <span>}</span><br>
+            </div>
+        </div>
+    </div>
+    <div>
+
+
+    </div>>
+    <div class="user">
+        <div id="Heading">GUI IMPLEMENTATION</div>
+        <div id="chk">
+
+            <div class="num_buffer">
+                <span id="Mode-type">Mode type:-</span>
+                <select name="mode" id="mode">
+                    <option value="pre-emptive">pre-emptive</option>
+                    <option value="non pre-emptive">non pre-emptive</option>
+                </select>
+            </div>
+
+            <div class="mode">
+                <span>Give first access to:-</span>
+                <select name="priority" id="priority">
+                    <option value="process-1">process-1</option>
+                    <option value="process-2">process-2</option>
+                </select>
+            </div>
+        </div>
+
+    </div>
+    <div class="statements" id="statements"></div>""
+    <!-- <div class="radio">
+            <span id="buffer">Give first access to:-</span>
+            <input type="radio" id="prod" name="access" value="producer">
+            <label for="prod">Producer</label>
+            <input type="radio" id="cons" name="access" value="consumer">
+            <label for="cons">Consumer</label><br>
+        </div>
+
+        <div class="radio">
+            <span id="mode">Select execution mode to:-</span>
+            <input type="radio" id="pre" name="mode" value="pre">
+            <label for="pre">pre-emptive</label>
+            <input type="radio" id="non-pre" name="mode" value="non-pre">
+            <label for="non-pre">non-preemptive</        </div> -->
+
+
+    <div class="start_ani">
+        <button id="start" onclick="create_ani();this.onclick=null;">Start GUI Implementation</button>
+    </div>
+    <div class="platform" id="platform"></div>
+    <div class="circle-cotainer" id="container"></div>
+    <div class="Upar" id="Upar"></div> 
+    <div class="Upar" id="Upar1"></div>    
+    <div class="counter" id="counter"></div>   
+    <div class="counter3" id="counter3"></div>  
+    <!-- <div class="counter" id="critical">
+        <span id="critical_sec">CRITICAL SECTION</span>
+    </div>    
+    <div class="counter" id="exit">
+        <span id="exit_sec">EXIT SECTION</span>
+    </div>     -->
+    <div id="pcontainer"></div>
+    <div class="right-stat">
+        <div id="status"></div>
+    </div>
+    <div class="statistic" id="statistic"></div>
+
+
+<!-- Code for Progress bar -->
+
+    <!-- <div class="w3-container">
+        
+        <div class="w3-light-grey">
+          <div id="myBar" class="w3-container w3-green w3-center" style="width:20%">20%</div>
+        </div>
+        <br>
+        <button class="w3-button w3-green" onclick="move()">Click Me</button> 
+        
+        </div>
+        
+        <script>
+        function move() {
+          var elem = document.getElementById("myBar");   
+          var width = 20;
+          var id = setInterval(frame, 10);
+          function frame() {
+            if (width >= 100) {
+              clearInterval(id);
+            } else {
+              width++; 
+              elem.style.width = width + '%'; 
+              elem.innerHTML = width * 1  + '%';
+            }
+          }
+        }
+        </script> -->
+        
+        <div id="completion_queue"></div>
+
+</body>
+
+</html>

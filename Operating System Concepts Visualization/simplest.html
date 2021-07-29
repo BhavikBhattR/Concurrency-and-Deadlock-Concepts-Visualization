@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Synchronization Mechnism</title>
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+  <link rel="stylesheet" href="./css/simplest.css">
+  <script src="./js/simplest.js"></script>
+</head>
+
+<body>
+  <header class="head">Simplest Synchronization Mechanism</header>
+
+  <!-- Pseudo code for Simplest Synchronization Mechanism -->
+  <div class="code">
+    <div class="code-1">Simplest Synchronization Mechanism</div>
+    <div class="pro">Statement 1) While(lock!=0);</div>
+    <div class="pro">Statement 2) lock=1;</div>
+    <div class="pro" class="box">Statement 3) Critical section</div>
+    <div class="pro">Statement 4) lock=0;</div>
+
+  </div>
+
+
+
+  <!-- User input -->
+
+  <div class="user">
+    <div class="userclass">
+      <span id="user-2">Number of processes to be executed:-</span>
+      <input type="number" min="1" max="8" id="Process">
+    </div>
+    <div>Click this button to give Precedence of CPU access to processes</div>
+    <button class="btn" onclick="createPrecedance();this.onclick=null;">Click</button>
+
+    <div class="table-container" id="show">
+      <table style="width: 100%;" id="myTable">
+        <caption>CPU time Precedence Table</caption>
+        <tr>
+          <th>Processes</th>
+          <th>Precedence</th>
+        </tr>
+      </table>
+    </div>
+
+    <div class="userclass">
+      <span id="user-1">Input initial lock variable value:-</span>
+      <input type="number" min="0" max="1" id="lock">
+    </div>
+
+    <div class="userclass">
+      <label for="mode">Choose the execution Mode:</label>
+
+      <select name="mode" id="mode">
+        <option value="pre-emptive">pre-emptive</option>
+        <option value="non-preemptive">non-preemptive</option>
+      </select>
+    </div>
+  </div>
+
+
+  <div class="start-container">
+    <button id="start" onclick="createicon();animation();myfunction();this.onclick=null">Start GUI
+      Implementation</button>
+  </div>
+
+  <div class="animation-container" id="SQUARE" style="display: none; clear: both;">
+    <div class="box2" id="state2"></div>
+
+
+    <div class="square">
+      <div class="icons" id="icons">
+      </div>
+      <div id="CS" style="position: relative; left: 73px; bottom: -80px; font-size: 35px; color: rgb(226, 195, 17); ">CS
+      </div>
+    </div>
+
+    <div class="status" id="state"></div>
+
+  </div>
+</body>
+
+</html>

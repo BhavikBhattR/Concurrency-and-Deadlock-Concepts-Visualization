@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bankers Algorithm</title>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src="./js/bankers.js"></script>
+    <link rel="stylesheet" href="./css/bankers.css">
+</head>
+
+<body>
+  <header class="head">Bankers Algorithm</header>
+
+    <div class="user">
+
+        <div class="input-1">
+            <span>Number of process:-</span>
+            <input type="number" name="process" id="P">
+        </div>
+        <table id="total-res">
+            <caption>Total system resources</caption>
+            <tr>
+                <th>R0</th>
+                <th>R1</th>
+                <th>R2</th>
+            </tr>
+
+            <tr >
+                <td><input type="number" class="same" id="R0"></td>
+                <td><input type="number" class="same" id="R1"></td>
+                <td><input type="number" class="same" id="R2"></td>
+            </tr>
+        </table>
+        <button class="btn" onclick="create();this.onclick=null;">Click</button>
+    </div>
+
+        <div class="table-container" id="table" style="display: none;">
+            <table  id="alloc-table">
+                <caption>Currently allocated resources</caption>
+                <tr>
+                    <th>Process</th>
+                    <th>R0</th>
+                    <th>R1</th>
+                    <th>R2</th>
+                </tr>
+
+                <!-- <tr>
+                    <td><input type="number" id="A00"></td>
+                    <td><input type="number" id="A01"></td>
+                    <td><input type="number" id="A02"></td>
+                </tr>
+                <tr>
+                    <td><input type="number" id="A10"></td>
+                    <td><input type="number" id="A11"></td>
+                    <td><input type="number" id="A12"></td>
+                </tr>
+                <tr>
+                    <td><input type="number" id="A20"></td>
+                    <td><input type="number" id="A21"></td>
+                    <td><input type="number" id="A22"></td>
+                </tr>
+                <tr>
+                    <td><input type="number" id="A30"></td>
+                    <td><input type="number" id="A31"></td>
+                    <td><input type="number" id="A32"></td>
+                </tr>
+                <tr>
+                    <td><input type="number" id="A40"></td>
+                    <td><input type="number" id="A41"></td>
+                    <td><input type="number" id="A42"></td>
+                </tr> -->
+            </table>
+
+            <table  id="maxneed-table">
+                <caption>Maximum resources needed</caption>
+                <tr>
+                    <th>Process</th>
+                    <th>R0</th>
+                    <th>R1</th>
+                    <th>R2</th>
+                </tr>
+
+                <!-- <tr>
+                    <td><input type="number" id="M00"></td>
+                    <td><input type="number" id="M01"></td>
+                    <td><input type="number" id="M02"></td>
+                </tr>
+                <tr>
+                    <td><input type="number" id="M10"></td>
+                    <td><input type="number" id="M11"></td>
+                    <td><input type="number" id="M12"></td>
+                </tr>
+                <tr>
+                    <td><input type="number" id="M20"></td>
+                    <td><input type="number" id="M21"></td>
+                    <td><input type="number" id="M22"></td>
+                </tr>
+                <tr>
+                    <td><input type="number" id="M30"></td>
+                    <td><input type="number" id="M31"></td>
+                    <td><input type="number" id="M32"></td>
+                </tr>
+                <tr>
+                    <td><input type="number" id="M40"></td>
+                    <td><input type="number" id="M41"></td>
+                    <td><input type="number" id="M42"></td>
+                </tr> -->
+            </table>
+    <button id="start" onclick="getvalues();this.click=null">Start</button>
+
+        </div>
+    
+
+
+    <div class="out-table" id="out-table" style="display: none;">
+        <div id="avail-need">
+        <table id="avail-res">
+            <caption>Available system resources</caption>
+            <th>R0</th>
+            <th>R1</th>
+            <th>R2</th>
+        </table>
+        <table id="need-res">
+            <caption>Needed resources</caption>
+            <tr>
+                <th>Process</th>
+                <th>R0</th>
+                <th>R1</th>
+                <th>R2</th>
+            </tr>
+        </table>
+    </div>
+        <div id="status">
+
+        </div>
+
+        <div id="out"></div>
+    </div>
+</body>
+
+</html>

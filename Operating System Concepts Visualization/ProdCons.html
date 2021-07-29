@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Producer Consumer</title>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link rel="stylesheet" href="./css/Prodcons.css">
+    <script src="./js/ProdCons.js"></script>
+
+</head>
+
+<body>
+    <header class="head">Producer Consumer</header>
+    <!-- Pseudo code for Simplest Synchronization Mechanism -->
+    <div class="code">
+        <div class="code-head">Producer Algorithm</div> <br>
+        <span> #define N 100 //maximum slots in buffer</span> <br>
+        <span>#define count=0 //items in the buffer</span><br>
+        <span>void producer (void) {</span><br>
+        <span> int item;</span><br>
+        <span> while(True) {</span> <br>
+        <span>item = produce_item(); //producer produces an item </span> <br>
+        <span> if(count == N) //if the buffer is full then the producer will sleep </span> <br>
+        <span> Sleep(); </span> <br>
+        <span> insert_item (item); //the item is inserted into buffer </span> <br>
+        <span> countcount=count+1; </span> <br>
+        <span> if(count==1) //The producer will wake up the </span> <br>
+        <span> //consumer if there is at least 1 item in the buffer </span> <br>
+        <span> wake-up(consumer); </span> <br>
+        <span> } </span> <br>
+        <span> } </span> <br>
+    </div>
+
+    <div class="code1">
+        <div class="code-head1">Consumer Algorithm</div> <br>
+        <span>void consumer (void) {</span><br>
+        <span> int item;</span><br>
+        <span> while(True) {</span> <br>
+        <span>{</span> <br>
+        <span> if(count == 0) //The consumer will sleep if the buffer is empty. </span> <br>
+        <span> Sleep(); </span> <br>
+        <span> item = remove_item(); </span> <br>
+        <span> countcount = count - 1; </span> <br>
+        <span> if(count == N-1) //if there is at least one slot available in the buffer</span> <br>
+        <span> //then the consumer will wake up producer </span> <br>
+        <span> wake-up(producer); </span> <br>
+        <span> consume_item(item); //the item is read by consumer. </span> <br>
+        <span> } </span> <br>
+        <span> } </span> <br>
+        <span> } </span> <br>
+    </div>
+
+    <div class="user">
+        <div class="Heading" id="Heading">GUI IMPLEMENTATION</div>
+        <div class="num_buffer">
+            <span id="buffer">Size of Buffer:-</span>
+            <input type="number" min="1" max="8" id="S1">
+        </div>
+
+
+        <div class="mode">
+            <span>Mode type:-</span>
+            <select name="mode" id="mode">
+                <option value="pre-emptive">pre-emptive</option>
+                <option value="non-preemptive">non-preemptive</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- <div class="radio">
+            <span id="buffer">Give first access to:-</span>
+            <input type="radio" id="prod" name="access" value="producer">
+            <label for="prod">Producer</label>
+            <input type="radio" id="cons" name="access" value="consumer">
+            <label for="cons">Consumer</label><br>
+        </div>
+
+        <div class="radio">
+            <span id="mode">Select execution mode to:-</span>
+            <input type="radio" id="pre" name="mode" value="pre">
+            <label for="pre">pre-emptive</label>
+            <input type="radio" id="non-pre" name="mode" value="non-pre">
+            <label for="non-pre">non-preemptive</label><br>
+        </div> -->
+
+
+    <div class="start_ani">
+        <button id="start" onclick="create_ani();visible();final();this.onclick=null;">Start GUI Implementation</button>
+    </div>
+
+    <div id="Animation" style="display: none;">
+        <!-- left side stat box -->
+        <div class="left-stat">
+            <div id="text2"></div>
+        </div>
+        <div id="text1">BUFFER ARRAY</div>
+
+        
+            <div class="box-container" id="box">
+                <!-- <div class="B1" id="B1"> </div>
+            <div class="B" id="B2"> </div>
+            <div class="B" id="B3"> </div>
+            <div class="B" id="B4"> </div>
+            <div class="B" id="B5"> </div>
+            <div class="B" id="B6"> </div> -->
+
+            </div>
+        
+        <!-- <div class="circle-container" id="circle"> </div> -->
+        <div id="arrow-container"></div>
+
+        <div class="counter" id="counter"><span id="textcounter">Counter</span></div>
+
+        <div class="generator-container" id="generator"></div>
+
+
+        <div class="right-stat">
+            <div id="live"></div>
+        </div>
+
+    </div>
+</body>
+
+</html>

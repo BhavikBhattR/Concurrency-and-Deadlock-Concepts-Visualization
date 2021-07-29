@@ -1,0 +1,1056 @@
+:root{
+    --font-color: #fff;
+    --hfont-size:1.4rem;
+    --font-size:1rem;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    position: relative;
+    background-color: #000000;
+}
+
+.head{
+    width: 100%;
+    color: var(--font-color);
+    padding: 20px 0px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.8rem;
+    text-shadow: 3px 2px 3px #e4e4ad;
+}
+/* for input field */
+input[type='number']{
+    width: 28px;
+}
+
+/* Pseudo code-box styling */
+.code {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 235px;
+    margin: auto;
+    background-color: #ece4e4;
+    color: black;
+    margin: 0px 35px;
+    border-radius: 10px;
+    float: left;
+}
+
+.code-1 {
+    margin: 10px 0px;
+    position: absolute;
+    top: 20px;
+    color: black;
+    font-size: var(--hfont-size);
+    font-weight: bold;
+}
+
+.pro {
+    width: 298px;
+    text-align: left;
+    padding: 3px 3px;
+    color: black;
+    font-size: var(--font-size);
+
+}
+
+/* User-box styling */
+.user {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border: 2px solid black;
+    width: 42%;
+    background-color: #ece4e4;
+    border-radius: 10px;
+    padding: 6px 0px;
+  
+}
+
+.userclass{
+    width: 375px;
+    padding: 3px 0px;
+    font-size: var(--font-size);
+
+}
+.user #user-1{
+    width: 20px;
+    text-align: left;
+}
+.user #user-2{
+    width: 20px;
+    text-align: left;
+}
+.user #user-3{
+    width: 20px;
+    text-align: left;
+}
+
+/* Start button */
+.btn {
+    display: block;
+    background-color: #444444;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 12px;
+    margin: 4px 0px;
+    color: var(--font-color);
+}
+
+.btn:hover{
+    background-color: #646465;
+}
+/* precedence table styling */
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 2px 2px;
+    font-size: var(--font-size);
+}
+
+caption{
+    font-weight: bold;
+    padding: 10px 0px;
+    font-size: var(--hfont-size);
+}
+.table-container {
+    width: 54%;
+    padding: 10px 10px;
+    border-radius: 9px;
+    display: none;
+    animation: animation 2s 1 ease-in;
+}
+@keyframes animation{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: .5;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.about{
+    width: 200px;
+    background-color: #fff;
+    /* border: 3px solid red; */
+    float: none;
+    clear: both;
+}
+
+#content{
+    display: none;
+    text-align: center;
+    background-color: black;
+    color: white;
+     display: none;
+     box-shadow:2px 2px 8px 1px #d4d4d4 ,-2px -2px 8px 1px #d4d4d4;
+     z-index: 1;
+}
+.start-container{
+    display: block;
+    position: relative;
+    width: 100%;
+    /* border: 2px solid red; */
+    text-align: center;
+    clear: both;
+}
+#start {
+   
+    position: relative;
+    width: 185px;
+    margin: auto;
+    height: 35px;
+    float: none;
+}
+.animation-container{
+    position: relative;
+  
+}
+
+.status{
+    display: inline;
+    position: relative;
+    clear: both;
+    width: 100%;
+    height: 100px;
+}
+.box2{
+    width: 100%;
+    height: 100px;
+    display: inline;
+    position: relative;
+    clear: both;
+    top: 120px;
+}
+.square {
+    position: relative;
+    background-color: antiquewhite;;
+    height: 200px;
+    width: 200px;
+    border-top-style: dotted;
+    border-right-style: dotted;
+    border-bottom-style: dotted;
+    border-left-style: dotted;
+    margin: auto;
+    top: -220px;
+}
+
+  #text {
+    position: relative;
+    bottom: -20px;
+    left: 22px;
+    color: rgb(8, 7, 7);
+  }
+  .text{
+      position: relative;
+      color: black;
+      left: 28px;
+      bottom: -30px;
+  }
+
+#p1{
+    top: -110px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color:#BDB76B;
+    border-radius: 50%;
+    left: -78px;
+    transition: all;
+}
+
+#p2 {
+    top: -130px;
+    left: 5px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color:#BDB76B;
+    border-radius: 50%;
+
+}
+#p3 {
+    top: -130px;
+    left: 95px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color:#BDB76B;
+    border-radius: 50%;
+}
+#p4 {
+    top: -120px;
+    left: 190px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: #BDB76B;
+    border-radius: 50%;
+}
+
+#p5 {
+    top: 245px;
+    left: 190px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color:#BDB76B;
+    border-radius: 50%;
+}
+
+#p6 {
+    top: 268px;
+    left: 95px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: #BDB76B;
+    border-radius: 50%;
+}
+
+#p7 {
+    top: 260px;
+    left: 5px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: #BDB76B;
+    border-radius: 50%;
+}
+
+#p8{
+    top: 245px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: #BDB76B;
+    border-radius: 50%;
+    left: -88px;
+}
+#something{
+    text-emphasis-color: white;
+}
+#live {
+    position: relative;
+    top: -495px;
+    left: 900px;
+    width: 394px;
+    height: 372px;
+    border: 15px solid #EEE8AA;
+    padding: 50px;
+    margin: 20px;
+}
+  #live1 {
+    position: relative;
+    left: 10px;
+    width: 410px;
+    height: 368px;
+    border: 15px solid #EEE8AA;
+    padding: 50px;
+    margin: 20px;
+  }
+
+  @keyframes p1in{
+    0%{
+        top: -110px;
+        left: -78px;
+    }
+
+    100%{
+        top:  9px;
+        left: 0px;
+    }
+}
+
+@keyframes p1stays{
+    0%{
+        top:  9px;
+        left: 0px;
+    }
+    100%{
+        top:  9px;
+        left: 0px;
+    }
+}
+
+@keyframes p1out{
+    0%{
+        top:  9px;
+    left: 0px;
+    }
+    100%{
+        top: -110px;
+        left: -78px;
+       
+    }
+}
+
+@keyframes p1buzz{
+    0%{
+        top: -110px;
+        left: -78px;
+    }
+
+    10%{
+       top:  -110px;
+        left: -68px;
+    }
+    20%{
+        top:  -110px;
+         left: -88px;
+     }
+
+     30%{
+        top:  -110px;
+         left: -68px;
+     }
+     40%{
+         top:  -110px;
+          left: -88px;
+      }
+      
+      50%{
+        top:  -110px;
+         left: -68px;
+     }
+     60%{
+         top:  -110px;
+          left: -88px;
+      }
+ 
+      70%{
+         top:  -110px;
+          left: -68px;
+      }
+      80%{
+          top:  -110px;
+           left: -88px;
+       }
+
+       90%{
+        top:  -110px;
+         left: -68px;
+     }
+
+      100%{
+        top:  -110px;
+         left: -78px;
+     }
+}
+@keyframes p2in{
+    0%{
+        top: -130px;
+        left: 5px;
+    }
+
+    100%{
+        top:  9px;
+        left: 50px;
+    }
+}
+@keyframes p2stays{
+    0%{
+        top:  9px;
+        left: 50px;
+    }
+    100%{
+        top:  9px;
+        left: 50px;
+    }
+}
+
+@keyframes p2out{
+    0%{
+        top:  9px;
+        left: 50px;
+    }
+    100%{
+        top: -130px;
+        left: 5px;
+       }
+}
+@keyframes p2buzz{
+    0%{
+        top: -130px;
+        left: 5px;
+    }
+    
+    10%{
+        top:  -130px;
+         left: 15px;
+     }
+     20%{
+         top:  -130px;
+          left: -5px;
+      }
+
+      30%{
+        top:  -130px;
+         left: 15px;
+     }
+     40%{
+         top:  -130px;
+          left: -5px;
+      }
+
+      50%{
+        top:  -130px;
+         left: 15px;
+     }
+     60%{
+         top:  -130px;
+          left: -5px;
+      }
+
+      70%{
+        top:  -130px;
+         left: 15px;
+     }
+     80%{
+         top:  -130px;
+          left: -5px;
+      }
+
+      90%{
+        top:  -130px;
+         left: 15px;
+     }
+    
+     100%{
+        top:  -130px;
+         left: 5px;
+     }
+}
+
+@keyframes p3in{
+    0%{
+        top: -130px;
+        left: 95px;
+    }
+
+    100%{
+        top:  9px;
+        left: 99px;
+    }
+}
+
+@keyframes p3stays{
+    0%{
+        top:  9px;
+        left: 99px;
+    }
+    100%{
+        top:  9px;
+        left: 99px;
+    }
+}
+
+@keyframes p3out{
+    0%{
+        top:  9px;
+        left: 99px;
+    }
+    100%{
+        top: -130px;
+        left: 95px;
+       
+    }
+}
+
+@keyframes p3buzz{
+    0%{
+        top: -130px;
+        left: 95px;
+    }
+
+    10%{
+        top:  -130px;
+        left: 105px;
+    }
+    20%{
+        top:  -130px;
+        left: 85px;
+    }
+
+    30%{
+        top:  -130px;
+        left: 105px;
+    }
+    40%{
+        top:  -130px;
+        left: 85px;
+    }
+
+    50%{
+        top:  -130px;
+        left: 105px;
+    }
+    60%{
+        top:  -130px;
+        left: 85px;
+    }
+
+    70%{
+        top:  -130px;
+        left: 105px;
+    }
+    80%{
+        top:  -130px;
+        left: 85px;
+    }
+
+    90%{
+        top:  -130px;
+        left: 105px;
+    }
+    
+    100%{
+        top:  -130px;
+         left: 95px;
+     }
+}
+
+
+
+@keyframes p4in{
+    0%{
+        top: -120px;
+        left: 190px;
+    }
+
+    100%{
+        top:  9px;
+        left: 144px;
+    }
+}
+
+@keyframes p4stays{
+    0%{
+        top:  9px;
+        left: 144px;
+    }
+    100%{
+        top:  9px;
+        left: 144px;
+    }
+}
+
+@keyframes p4out{
+    0%{
+        top:  9px;
+        left: 144px;
+    }
+    100%{
+        top: -120px;
+        left: 190px;
+       
+    }
+}
+@keyframes p4buzz{
+    0%{
+        top: -120px;
+        left: 190px;
+    }
+
+    10%{
+        top:  -120px;
+        left: 200px;
+    }
+    20%{
+        top:  -120px;
+        left: 180px;
+    }
+
+    30%{
+        top:  -120px;
+        left: 200px;
+    }
+    40%{
+        top:  -120px;
+        left: 180px;
+    }
+
+    50%{
+        top:  -120px;
+        left: 200px;
+    }
+    60%{
+        top:  -120px;
+        left: 180px;
+    }
+
+    70%{
+        top:  -120px;
+        left: 200px;
+    }
+    80%{
+        top:  -120px;
+        left: 180px;
+    }
+
+    90%{
+        top:  -120px;
+        left: 200px;
+    }
+    
+    100%{
+        top: -120px;
+        left: 190px;
+    }
+}
+
+
+@keyframes p5in{
+    0%{
+        top: 245px;
+        left: 190px;
+    }
+
+    100%{
+        top:  140px;
+        left: 144px;
+    }
+}
+
+@keyframes p5stays{
+    0%{
+        top:  140px;
+        left: 144px;
+    }
+    100%{
+        top:  140px;
+        left: 144px;
+    }
+}
+
+@keyframes p5out{
+    0%{
+        top:  140px;
+        left: 144px;
+    }
+    100%{
+        top: 245px;
+        left: 190px;
+       
+    }
+}
+@keyframes p5buzz{
+    0%{
+        top: 245px;
+        left: 190px;
+    }
+    
+    10%{
+        top:  245px;
+        left: 200px;
+    }
+    20%{
+        top:  245px;
+        left: 180px;
+    }
+
+    30%{
+        top:  245px;
+        left: 200px;
+    }
+    40%{
+        top:  245px;
+        left: 180px;
+    }
+
+    50%{
+        top:  245px;
+        left: 200px;
+    }
+    60%{
+        top:  245px;
+        left: 180px;
+    }
+
+    70%{
+        top:  245px;
+        left: 200px;
+    }
+    80%{
+        top:  245px;
+        left: 180px;
+    }
+
+    90%{
+        top:  245px;
+        left: 200px;
+    }
+    
+     100%{
+        top:  245px;
+         left: 190px;
+     }
+}
+
+@keyframes p6in{
+    0%{
+        top: 268px;
+        left: 95px;
+    }
+
+    100%{
+        top:  140px;
+        left: 99px;
+    }
+}
+
+@keyframes p6stays{
+    0%{
+        top:  140px;
+        left: 99px;
+    }
+    100%{
+        top:  140px;
+        left: 99px;
+    }
+}
+
+@keyframes p6out{
+    0%{
+        top:  140px;
+        left: 99px;
+    }
+    100%{
+        top: 268px;
+        left: 95px;
+       
+    }
+}
+@keyframes p6buzz{
+    0%{
+        top: 268px;
+        left: 95px;
+    }
+
+    10%{
+        top: 268px;
+        left: 105px;
+    }
+    20%{
+        top: 268px;
+        left: 85px;
+    }
+
+    30%{
+        top: 268px;
+        left: 105px;
+    }
+    40%{
+        top: 268px;
+        left: 85px;
+    }
+
+    50%{
+        top: 268px;
+        left: 105px;
+    }
+    60%{
+        top: 268px;
+        left: 85px;
+    }
+
+    70%{
+        top: 268px;
+        left: 105px;
+    }
+    80%{
+        top: 268px;
+        left: 85px;
+    }
+
+    90%{
+        top: 268px;
+        left: 105px;
+    }
+    
+
+    100%{
+        top: 268px;
+        left: 95px;
+    }
+}
+
+@keyframes p7in{
+    0%{
+        top: 260px;
+        left: 5px;
+    }
+
+    100%{
+        top:  140px;
+        left: 50px;
+    }
+}
+
+@keyframes p7stays{
+    0%{
+        top:  140px;
+        left: 50px;
+    }
+    100%{
+        top:  140px;
+        left: 50px;
+    }
+}
+
+@keyframes p7out{
+    0%{
+        top:  140px;
+        left: 50px; 
+    }
+    100%{
+        top: 260px;
+        left: 5px;
+       
+    }
+}
+@keyframes p7buzz{
+    0%{
+        top: 260px;
+        left: 5px;
+    }
+
+    10%{
+        top: 260px;
+        left: 15px;
+    }
+    20%{
+        top: 260px;
+        left: -5px;
+    }
+
+    30%{
+        top: 260px;
+        left: 15px;
+    }
+    40%{
+        top: 260px;
+        left: -5px;
+    }
+
+    50%{
+        top: 260px;
+        left: 15px;
+    }
+    60%{
+        top: 260px;
+        left: -5px;
+    }
+
+    70%{
+        top: 260px;
+        left: 15px;
+    }
+    80%{
+        top: 260px;
+        left: -5px;
+    }
+
+    90%{
+        top: 260px;
+        left: 15px;
+    }
+    
+    100%{
+        top: 260px;
+        left: 5px;
+    }
+}
+
+@keyframes p8in{
+    0%{
+        top: 245px;
+        left: -78px;
+    }
+
+    100%{
+        top:  140px;
+        left: 0px;
+    }
+}
+
+@keyframes p8stays{
+    0%{
+        top:  140px;
+    left: 0px;
+    }
+    100%{
+        top:  140px;
+        left: 0px;
+    }
+}
+
+@keyframes p8out{
+    0%{
+        top:  140px;
+        left: 0px;
+    }
+    100%{
+        top: 245px;
+        left: -78px;
+       
+    }
+}
+@keyframes p8buzz{
+    0%{
+        top: 245px;
+        left: -78px;
+    }
+
+    10%{
+        top: 245px;
+        left: -68px;
+    }
+
+    20%{
+        top: 245px;
+        left: -88px;
+    }
+
+    30%{
+        top: 245px;
+        left: -68px;
+    }
+
+    40%{
+        top: 245px;
+        left: -88px;
+    }
+
+    50%{
+        top: 245px;
+        left: -68px;
+    }
+
+    60%{
+        top: 245px;
+        left: -88px;
+    }
+
+    70%{
+        top: 245px;
+        left: -68px;
+    }
+
+    80%{
+        top: 245px;
+        left: -88px;
+    }
+
+    90%{
+        top: 245px;
+        left: -68px;
+    }
+
+    100%{
+        top: 245px;
+        left: -78px;
+    }
+}

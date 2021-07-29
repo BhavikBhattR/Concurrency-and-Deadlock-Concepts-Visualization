@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counting semaphore</title>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link rel="stylesheet" href="./css/semaphore.css">
+    <script src="./js/semaphore.js"></script>
+
+</head>
+
+<body>
+    <header class="head">COUNTING SEMAPHORE</header>
+    <!-- Pseudo code for Simplest Synchronization Mechanism -->
+    <div class="code">
+        <div id="code-container">
+            <div id="code-head">Psuedo code segments</div>
+            <div class="upper">
+                <div class="code-1">
+                    <div class="code-head" id="head1">SEMAPHORE VARIABLES</div> <br>
+                    <div class="psuedo" id="psuedo1">
+                        <span></span> <br>
+                        <span> struct semaphore</span> <br>
+                        <span>{</span><br>
+                        <span>int value;</span><br>
+                        <span>Queue type L;</span><br>
+                        <span>}</span><br>
+                    </div>
+                </div>
+                <div class="code-2">
+                    <div class="code-head" id="head2">DOWN SEMAPHORE</div> <br>
+                    <div class="psuedo" id="psuedo2">
+                        <span>Down(semaphore S)</span><br>
+                        <span>{</span><br>
+                        <span>S.value=S.value-1;</span><br>
+                        <span>if(S.value<0) {</span><br>
+                        <span>put process(PCB) in Queue L</span><br>
+                        <span>sleep();</span><br>
+                        <span>}</span> <br>
+                        <span>else</span><br>
+                        <span>return;</span><br>
+                        <span>}</span><br>
+                    </div>
+                </div>
+            </div>
+            <div class="lower">
+                <div class="code-4">
+                    <div class="code-head" id="head3">UP SEMAPHORE</div>
+                    </br>
+
+                    <div class="psuedo" id="psuedo3">
+                        <span>Up(semaphore S)</span><br>
+                        <span>{</span><br>
+                        <span>S.value=S.value+1;</span><br>
+                        <span>if(S.value<=0) {;</span><br>
+                        <span>select a process from Queue L</span><br>
+                        <span>wake up();</span><br>
+                        <span>}</span> <br>
+                        <span>else</span><br>
+                        <span>return;</span><br>
+                        <span>}</span><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="user" id="box">
+        <div id="Heading">GUI IMPLEMENTATION</div>
+        <div id="chk">
+
+            <div class="num_buffer">
+                <span id="Mode-type">Mode type:-</span>
+                <select name="mode" id="mode">
+                    <option value="pre-emptive">pre-emptive</option>
+                    <option value="non pre-emptive">non pre-emptive</option>
+                </select>
+            </div>
+
+            <div class="userclass">
+                <span id="user-2">Number of processes :-</span>
+                <select name="number" id="number">
+                    <option value="2">2</option>
+                </select>
+            </div>
+
+            <div class="user-4">
+                <span id="s_head">Initial semaphore value :-</span>
+                <select name="sno" id="sno">
+                    <option value="-3">-3</option>
+                    <option value="-2">-2</option>
+                    <option value="-1">-1</option>
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+            </div>
+
+
+
+            <button class="btn" onclick="createPrecedance();this.onclick=null;">Click</button>
+            <div id=clickinfo>Click to give Precedence to processes:</div>
+            <div class="table-container" id="show">
+                <table style="width: 100%;" id="myTable">
+                    <caption>CPU time Precedence Table</caption>
+                    <tr>
+                        <th>Processes</th>
+                        <th>Precedence</th>
+                    </tr>
+                </table>
+            </div>
+
+
+            <div class="start_ani" onclick="ani_items();execution(); this.onclick=null;">
+                <button id="start">Start GUI Implementation</button>
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+
+    <div id="code_tank"></div>
+    <!-- <div class="pcode" id="p1code">
+        <div class="pcodehead">P1</div>
+        <div class="codecontent">
+            <span>While(true)</span><br>
+            <span>DOWN(semaphore s)</span><br>
+            <span>{CS}</span><br>
+            <span>UP(semaphore s)</span><br>
+        </div>
+    </div>
+
+    <div class="pcode" id="p2code">
+        <div class="pcodehead">P2</div>
+        <div class="codecontent">
+            <span>While(true)</span><br>
+            <span>DOWN(semaphore s)</span><br>
+            <span>{CS}</span><br>
+            <span>UP(semaphore s)</span><br>
+        </div>
+    </div> -->
+
+
+
+    <div class="item-container" id="item-container"></div>
+
+    <div id=semaphore></div>
+    <div class="head-container" id="values"></div>
+    <div id="queue-container"></div>
+    <div class="block-container" id="block-container"></div>
+    <div id="live-stat" style="display: none;"></div>
+</body>
+
+</html>
